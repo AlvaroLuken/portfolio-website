@@ -2,6 +2,7 @@ import styled from "styled-components";
 import NavBar from "./NavBar";
 import Title from "./Title";
 import RickAndMorty from "./RickAndMorty";
+import ConnectWallet from "./ConnectWallet";
 
 
 const HeightDiv = styled.div`
@@ -13,6 +14,7 @@ function App() {
   return (
     <div>
       <NavBar />
+      <ConnectWallet/>
       <Title />
       <RickAndMorty/>
       <HeightDiv/>

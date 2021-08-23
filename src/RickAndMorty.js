@@ -6,6 +6,7 @@ const CenterText = styled.div`
   font-size: 24px;
   margin-top: 312px;
   text-align: center;
+  margin-bottom: 16px;
 `
 
 const ImageContainer = styled.div`
@@ -18,6 +19,23 @@ const Image = styled.img`
   height: 364px;
   margin-left: 16px;
 `
+
+const CenterButton = styled.div`
+  text-align: center;
+  margin-top: 24px;
+`
+
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "white" : "black"};
+  color: ${props => props.primary ? "white" : "white"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid blueviolet;
+  border-radius: 3px;
+`;
 
 
 function RickAndMorty() {
@@ -36,6 +54,10 @@ function RickAndMorty() {
       <ImageContainer>
         <Image src={imageUrl}/>
       </ImageContainer>
+      <CenterButton>
+        <Button colorScheme="white" variant="solid" onClick={getRandomCharacter}>Refresh Character</Button>
+      </CenterButton>
+      
     </div>
   )
 
